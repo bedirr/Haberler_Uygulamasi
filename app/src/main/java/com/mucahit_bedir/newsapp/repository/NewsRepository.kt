@@ -1,5 +1,6 @@
-package com.mucahit_bedir.newsapp.repository.service
+package com.mucahit_bedir.newsapp.repository
 
+import com.mucahit_bedir.newsapp.repository.service.RetroFitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

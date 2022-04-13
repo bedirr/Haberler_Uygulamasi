@@ -32,7 +32,10 @@ fun getCircularDrawable(context: Context): CircularProgressDrawable {
     }
 }
 
-fun ImageView.loadImage(url: String, progressDrawable: CircularProgressDrawable) {
+fun ImageView.loadImage(
+    url: String,
+    progressDrawable: CircularProgressDrawable = getCircularDrawable(context)
+) {
     val options = RequestOptions()
         .placeholder(progressDrawable)
         .error(R.drawable.ic_launcher_foreground)
@@ -41,9 +44,10 @@ fun ImageView.loadImage(url: String, progressDrawable: CircularProgressDrawable)
         .load(url)
         .into(this)
 }
+
 @BindingAdapter("loadImage")
-fun loadImage(imageView: ImageView, url: String?){
-    if (url!=null){
+fun loadImage(imageView: ImageView, url: String?) {
+    if (url != null) {
         imageView.loadImage(url!!, getCircularDrawable(imageView.context))
     }
 }
