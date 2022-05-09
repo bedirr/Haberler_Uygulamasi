@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class NewsResponse(
     @SerializedName("articles")
-    var articles: MutableList<Article>,
+    val articles: List<Article>,
     @SerializedName("status")
-    var status: String?,
-    @SerializedName("totalResult")
-    var totalResult: Int?
+    val status: String,
+    @SerializedName("totalResults")
+    val totalResults: Int
 )

@@ -1,6 +1,6 @@
 package com.mucahit_bedir.newsapp.ui.home
 
-import android.annotation.SuppressLint
+import  android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
